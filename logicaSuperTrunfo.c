@@ -68,6 +68,38 @@ int main() {
         float super_poder1 = (float)populacao1 + area1 + pib1 + pontos1 + pib_per_capita1 + (1.0f / densidade1);
         float super_poder2 = (float)populacao2 + area2 + pib2 + pontos2 + pib_per_capita2 + (1.0f / densidade2);
 
+        switch(opcao) {
+            case 1:
+                printf("População: %s venceu!\n", populacao1 > populacao2 ? nome1 : nome2);
+                break;
+            case 2:
+                printf("Área: %s venceu!\n", area1 > area2 ? nome1 : nome2);
+                break;
+            case 3:
+                printf("PIB: %s venceu!\n", pib1 > pib2 ? nome1 : nome2);
+                break;
+            case 4:
+                printf("Pontos turísticos: %s venceu!\n", pontos1 > pontos2 ? nome1 : nome2);
+                break;
+            case 5:
+                printf("Densidade populacional (menor é melhor): %s venceu!\n", densidade1 < densidade2 ? nome1 : nome2);
+                break;
+            case 6:
+                printf("PIB per capita: %s venceu!\n", pib_per_capita1 > pib_per_capita2 ? nome1 : nome2);
+                break;
+            case 7:
+                printf("Super Poder: %s venceu!\n", super_poder1 > super_poder2 ? nome1 : nome2);
+                break;
+            case 0:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+        }
+
+     } while (opcao != 0);
+
+/*
     printf("\nEscolha o critério para comparação:\n");
     printf("1 - População\n");
     printf("2 - Área\n");
@@ -115,6 +147,7 @@ int main() {
     } else {
         printf("Critério inválido!\n");
     }
+*/ 
 
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio

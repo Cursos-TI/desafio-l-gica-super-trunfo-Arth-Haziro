@@ -47,21 +47,13 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos2);
 
-    densidade1 = populacao1 / area1;
-    densidade2 = populacao2 / area2;
-    pib_per_capita1 = pib1 / populacao1;
-    pib_per_capita2 = pib2 / populacao2;
-
-    super_poder1 = (float)populacao1 + area1 + pib1 + pontos1 + pib_per_capita1 + (1.0f / densidade1);
-    super_poder2 = (float)populacao2 + area2 + pib2 + pontos2 + pib_per_capita2 + (1.0f / densidade2);
-    resultado_populacao = (populacao1 > populacao2) ? 1 : 0;
-    resultado_area = (area1 > area2) ? 1 : 0;
-    resultado_pib = (pib1 > pib2) ? 1 : 0;
-    resultado_pontos = (pontos1 > pontos2) ? 1 : 0;
-    resultado_densidade = (densidade1 < densidade2) ? 1 : 0; // menor é melhor
-    resultado_pib_capita = (pib_per_capita1 > pib_per_capita2) ? 1 : 0;
-    resultado_super_poder = (super_poder1 > super_poder2) ? 1 : 0;
-
+    printf("\nEscolha o critério para comparação:\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos turísticos\n");
+    scanf("%d", &criterio);
+    
     printf("\n--- Resultado da Comparação ---\n");
     printf("População: %d\n", resultado_populacao);
     printf("Área: %d\n", resultado_area);

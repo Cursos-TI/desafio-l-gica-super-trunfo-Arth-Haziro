@@ -7,16 +7,15 @@
 
 int main() {
     printf("Super Trunfo!");
+    char estado1[3], estado2[3];
+    char nome1[50], nome2[50];
     char codigo1[4], codigo2[4];
     unsigned long int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
-    float densidade1, densidade2;
-    float pib_per_capita1, pib_per_capita2;
-    float super_poder1, super_poder2;
-    int resultado_populacao, resultado_area, resultado_pib;
-    int resultado_pontos, resultado_densidade, resultado_pib_capita, resultado_super_poder;
+    int criterio;
+
     printf("Cadastro da primeira carta:\n");
     printf("Código da cidade (ex: A01): ");
     scanf("%s", codigo1);

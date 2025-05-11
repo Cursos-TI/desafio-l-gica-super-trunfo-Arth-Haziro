@@ -71,8 +71,48 @@ int main() {
         scanf("%d", &opcao1);
         printf("Escolha o segundo atributo (1-7): ");
         scanf("%d", &opcao2);
-        
-        switch(opcao) {
+
+       int vitorias1 = 0, vitorias2 = 0;
+
+        for (int i = 0; i < 2; i++) {
+            int opcao = (i == 0) ? opcao1 : opcao2;
+            printf("\nComparando atributo %d:\n", opcao);
+
+            switch(opcao) {
+                case 1:
+                    (populacao1 > populacao2) ? vitorias1++ :
+                    (populacao2 > populacao1) ? vitorias2++ : 0;
+                    break;
+                case 2:
+                    (area1 > area2) ? vitorias1++ :
+                    (area2 > area1) ? vitorias2++ : 0;
+                    break;
+                case 3:
+                    (pib1 > pib2) ? vitorias1++ :
+                    (pib2 > pib1) ? vitorias2++ : 0;
+                    break;
+                case 4:
+                    (pontos1 > pontos2) ? vitorias1++ :
+                    (pontos2 > pontos1) ? vitorias2++ : 0;
+                    break;
+                case 5:
+                    (densidade1 < densidade2) ? vitorias1++ :
+                    (densidade2 < densidade1) ? vitorias2++ : 0;
+                    break;
+                case 6:
+                    (pib_per_capita1 > pib_per_capita2) ? vitorias1++ :
+                    (pib_per_capita2 > pib_per_capita1) ? vitorias2++ : 0;
+                    break;
+                case 7:
+                    (super_poder1 > super_poder2) ? vitorias1++ :
+                    (super_poder2 > super_poder1) ? vitorias2++ : 0;
+                    break;
+                default:
+                    printf("Atributo inválido!\n");
+            }
+        }
+
+/*       switch(opcao) {
             case 1:
                 printf("População: %s venceu!\n", populacao1 > populacao2 ? nome1 : nome2);
                 break;
@@ -102,7 +142,7 @@ int main() {
         }
 
      } while (opcao != 0);
-
+*/
 /*
     printf("\nEscolha o critério para comparação:\n");
     printf("1 - População\n");

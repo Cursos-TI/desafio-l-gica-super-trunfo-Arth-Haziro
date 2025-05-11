@@ -61,6 +61,13 @@ int main() {
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
 
+        float densidade1 = populacao1 / area1;
+        float densidade2 = populacao2 / area2;
+        float pib_per_capita1 = pib1 / populacao1;
+        float pib_per_capita2 = pib2 / populacao2;
+        float super_poder1 = (float)populacao1 + area1 + pib1 + pontos1 + pib_per_capita1 + (1.0f / densidade1);
+        float super_poder2 = (float)populacao2 + area2 + pib2 + pontos2 + pib_per_capita2 + (1.0f / densidade2);
+
     printf("\nEscolha o critério para comparação:\n");
     printf("1 - População\n");
     printf("2 - Área\n");

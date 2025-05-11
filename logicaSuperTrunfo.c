@@ -61,6 +61,39 @@ int main() {
     printf("\n--- Carta 2 - %s ---\n", codigo2);
     printf("Estado: %s\nCidade: %s\nPopulação: %lu\nÁrea: %.2f\nPIB: %.2f\nPontos turísticos: %d\n",
         estado2, nome2, populacao2, area2, pib2, pontos2);
+    
+        printf("\n--- Resultado da Comparação ---\n");
+    if (criterio == 1) {
+        if (populacao1 > populacao2)
+            printf("Vencedora: Carta 1 (%s)\n", nome1);
+        else if (populacao2 > populacao1)
+            printf("Vencedora: Carta 2 (%s)\n", nome2);
+        else
+            printf("Empate!\n");
+    } else if (criterio == 2) {
+        if (area1 > area2)
+            printf("Vencedora: Carta 1 (%s)\n", nome1);
+        else if (area2 > area1)
+            printf("Vencedora: Carta 2 (%s)\n", nome2);
+        else
+            printf("Empate!\n");
+    } else if (criterio == 3) {
+        if (pib1 > pib2)
+            printf("Vencedora: Carta 1 (%s)\n", nome1);
+        else if (pib2 > pib1)
+            printf("Vencedora: Carta 2 (%s)\n", nome2);
+        else
+            printf("Empate!\n");
+    } else if (criterio == 4) {
+        if (pontos1 > pontos2)
+            printf("Vencedora: Carta 1 (%s)\n", nome1);
+        else if (pontos2 > pontos1)
+            printf("Vencedora: Carta 2 (%s)\n", nome2);
+        else
+            printf("Empate!\n");
+    } else {
+        printf("Critério inválido!\n");
+    }
 
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio

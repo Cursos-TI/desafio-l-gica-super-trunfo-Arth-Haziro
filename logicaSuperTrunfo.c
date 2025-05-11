@@ -16,7 +16,11 @@ int main() {
     int pontos1, pontos2;
     int criterio;
 
-    printf("Cadastro da primeira carta:\n");
+    printf("\nCadastro da primeira carta:\n");
+    printf("Estado (sigla): ");
+    scanf("%s", estado1);
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", nome1);
     printf("Código da cidade (ex: A01): ");
     scanf("%s", codigo1);
     printf("População: ");
@@ -28,6 +32,10 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos1);
     printf("\nCadastro da segunda carta:\n");
+    printf("Estado (sigla): ");
+    scanf("%s", estado2);
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", nome2);
     printf("Código da cidade (ex: B02): ");
     scanf("%s", codigo2);
     printf("População: ");

@@ -47,7 +47,8 @@ int main() {
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos2);
 
-    int opcao;
+    int opcao1, opcao2;
+    int continuar;
     do {
         printf("\n--- Menu de Comparação ---\n");
         printf("1. População\n");

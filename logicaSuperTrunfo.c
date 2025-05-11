@@ -50,18 +50,7 @@ int main() {
     int opcao1, opcao2;
     int continuar;
     do {
-        printf("\n--- Menu de Comparação ---\n");
-        printf("1. População\n");
-        printf("2. Área\n");
-        printf("3. PIB\n");
-        printf("4. Pontos turísticos\n");
-        printf("5. Densidade populacional\n");
-        printf("6. PIB per capita\n");
-        printf("7. Super Poder\n");
-        printf("0. Sair\n");
-        printf("Escolha uma opção: ");
-        scanf("%d", &opcao);
-
+        
         float densidade1 = populacao1 / area1;
         float densidade2 = populacao2 / area2;
         float pib_per_capita1 = pib1 / populacao1;
@@ -69,6 +58,20 @@ int main() {
         float super_poder1 = (float)populacao1 + area1 + pib1 + pontos1 + pib_per_capita1 + (1.0f / densidade1);
         float super_poder2 = (float)populacao2 + area2 + pib2 + pontos2 + pib_per_capita2 + (1.0f / densidade2);
 
+        printf("\n--- Atributos Disponíveis ---\n");
+        printf("1. População\n");
+        printf("2. Área\n");
+        printf("3. PIB\n");
+        printf("4. Pontos turísticos\n");
+        printf("5. Densidade populacional (menor é melhor)\n");
+        printf("6. PIB per capita\n");
+        printf("7. Super Poder\n");
+
+        printf("Escolha o primeiro atributo (1-7): ");
+        scanf("%d", &opcao1);
+        printf("Escolha o segundo atributo (1-7): ");
+        scanf("%d", &opcao2);
+        
         switch(opcao) {
             case 1:
                 printf("População: %s venceu!\n", populacao1 > populacao2 ? nome1 : nome2);

@@ -111,7 +111,20 @@ int main() {
                     printf("Atributo inválido!\n");
             }
         }
+        
+        printf("\n--- Resultado Final ---\n");
+        if (vitorias1 > vitorias2) {
+            printf("%s venceu a rodada com %d atributos contra %d!\n", nome1, vitorias1, vitorias2);
+        } else if (vitorias2 > vitorias1) {
+            printf("%s venceu a rodada com %d atributos contra %d!\n", nome2, vitorias2, vitorias1);
+        } else {
+            printf("Empate! Cada cidade venceu em 1 atributo.\n");
+        }
 
+        printf("\nDeseja realizar outra comparação? (1 = sim / 0 = não): ");
+        scanf("%d", &continuar);
+
+    } while (continuar == 1);
 /*       switch(opcao) {
             case 1:
                 printf("População: %s venceu!\n", populacao1 > populacao2 ? nome1 : nome2);

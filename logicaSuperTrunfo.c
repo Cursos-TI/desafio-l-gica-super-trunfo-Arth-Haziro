@@ -14,7 +14,6 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
-    int criterio;
 
     printf("\nCadastro da primeira carta:\n");
     printf("Estado (sigla): ");

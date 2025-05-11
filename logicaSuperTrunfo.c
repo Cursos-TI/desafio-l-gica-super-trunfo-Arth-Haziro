@@ -53,16 +53,14 @@ int main() {
     printf("3 - PIB\n");
     printf("4 - Pontos turísticos\n");
     scanf("%d", &criterio);
-    
-    printf("\n--- Resultado da Comparação ---\n");
-    printf("População: %d\n", resultado_populacao);
-    printf("Área: %d\n", resultado_area);
-    printf("PIB: %d\n", resultado_pib);
-    printf("Pontos turísticos: %d\n", resultado_pontos);
-    printf("Densidade Populacional: %d\n", resultado_densidade);
-    printf("PIB per Capita: %d\n", resultado_pib_capita);
-    printf("Super Poder: %d\n", resultado_super_poder);
 
+    printf("\n--- Carta 1 - %s ---\n", codigo1);
+    printf("Estado: %s\nCidade: %s\nPopulação: %lu\nÁrea: %.2f\nPIB: %.2f\nPontos turísticos: %d\n",
+        estado1, nome1, populacao1, area1, pib1, pontos1);
+
+    printf("\n--- Carta 2 - %s ---\n", codigo2);
+    printf("Estado: %s\nCidade: %s\nPopulação: %lu\nÁrea: %.2f\nPIB: %.2f\nPontos turísticos: %d\n",
+        estado2, nome2, populacao2, area2, pib2, pontos2);
 
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio

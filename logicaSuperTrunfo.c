@@ -30,6 +30,7 @@ int main() {
     scanf("%f", &pib1);
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos1);
+    
     printf("\nCadastro da segunda carta:\n");
     printf("Estado (sigla): ");
     scanf("%s", estado2);
@@ -45,6 +46,20 @@ int main() {
     scanf("%f", &pib2);
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos2);
+
+    int opcao;
+    do {
+        printf("\n--- Menu de Comparação ---\n");
+        printf("1. População\n");
+        printf("2. Área\n");
+        printf("3. PIB\n");
+        printf("4. Pontos turísticos\n");
+        printf("5. Densidade populacional\n");
+        printf("6. PIB per capita\n");
+        printf("7. Super Poder\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcao);
 
     printf("\nEscolha o critério para comparação:\n");
     printf("1 - População\n");
